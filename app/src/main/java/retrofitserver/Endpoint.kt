@@ -1,10 +1,10 @@
 package retrofitserver
-
-import com.example.mobileproject.Doctor
+import classes.Patient
 import retrofit2.http.GET
+import retrofit2.http.Path
 
 interface Endpoint {
 
-   // @GET("getlistdoctors")
-    //fun getDoctors(): retrofit2.Call<List<Doctor>>
+   @GET("getPatient")
+   fun getPatient(@Path("phone") num : String,@Path("password") pw : String): retrofit2.Call<Patient?>
 }
