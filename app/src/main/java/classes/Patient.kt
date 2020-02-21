@@ -1,7 +1,9 @@
 package classes
+import androidx.room.Entity
+import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-
+@Entity(tableName = "Patient")
 data class Patient (
     @PrimaryKey
     val nssp : String,
@@ -9,6 +11,5 @@ data class Patient (
     val last_name : String,
     val adress : String,
     val phone : String,
-    val password : String,
-    val connect : Boolean
+    val password : String
 )
