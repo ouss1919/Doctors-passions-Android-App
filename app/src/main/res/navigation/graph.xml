@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph"
+    app:startDestination="@id/mainFragment">
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.mobileproject.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_authoFragment"
+            app:destination="@id/authoFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_new_accountFragment2"
+            app:destination="@id/new_accountFragment2" />
+        <action
+            android:id="@+id/action_mainFragment_to_searchdoctorpublicFragment"
+            app:destination="@id/searchdoctorpublicFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authoFragment"
+        android:name="com.example.mobileproject.AuthoFragment"
+        android:label="AuthoFragment" >
+        <action
+            android:id="@+id/action_authoFragment_to_new_accountFragment2"
+            app:destination="@id/new_accountFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/new_accountFragment2"
+        android:name="com.example.mobileproject.new_accountFragment"
+        android:label="fragment_new_account"
+        tools:layout="@layout/fragment_new_account" >
+        <action
+            android:id="@+id/action_new_accountFragment2_to_changepasswordFragment"
+            app:destination="@id/changepasswordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/changepasswordFragment"
+        android:name="com.example.mobileproject.changepasswordFragment"
+        android:label="fragment_changepassword"
+        tools:layout="@layout/fragment_changepassword" >
+        <action
+            android:id="@+id/action_changepasswordFragment_to_authoFragment"
+            app:destination="@id/authoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchdoctorpublicFragment"
+        android:name="com.example.mobileproject.SearchdoctorpublicFragment"
+        android:label="fragment_searchdoctorpublic"
+        tools:layout="@layout/fragment_searchdoctorpublic" >
+        <action
+            android:id="@+id/action_searchdoctorpublicFragment_to_doctordetailFragment"
+            app:destination="@id/doctordetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorslistFragment"
+        android:name="com.example.mobileproject.DoctorslistFragment"
+        android:label="fragment_doctorslist"
+        tools:layout="@layout/fragment_doctorslist" />
+    <fragment
+        android:id="@+id/doctordetailFragment"
+        android:name="com.example.mobileproject.DoctordetailFragment"
+        android:label="fragment_doctordetail"
+        tools:layout="@layout/fragment_doctordetail" >
+        <action
+            android:id="@+id/action_doctordetailFragment_to_doctorslistFragment"
+            app:destination="@id/doctorslistFragment" />
+    </fragment>
+</navigation>
